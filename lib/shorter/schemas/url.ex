@@ -44,3 +44,4 @@ defmodule Shorter.Url do
     slug = Ecto.UUID.generate()
     put_change(changeset, :slug, slug)
   end
+end
