@@ -1,53 +1,40 @@
 defmodule ShorterWeb.UrlController do
+  @moduledoc """
+  Controller for handling the URL shortening.
+  """
+
   use ShorterWeb, :controller
-  alias ShorterWeb.Urls
-  alias ShorterWeb.Url
 
+  alias Shorter.Urls
+  alias Shorter.Schemas.Url
+  alias Shorter.Services.ShortenUrl
 
-  @doc"""
-  Renders a form where users can paste in a URL
+  @doc """
+  Renders the form that allows user input of the original URL.
   """
+  @spec new(Plug.Conn.t(), map()) :: Plug.Conn.t()
   def new(conn, _params) do
-    render(conn, "index.html")
+    changeset = Urls.change_url(%Url{})
+    render(conn, :new, changeset: changeset, original_url: nil, slug: nil)
   end
 
-
-  @doc"""
-  Processes user submission to return the short URL if the input URL is valid.
+  @doc """
+  Handles the form submissions
   """
-  def create(conn, %{"url" => %{"url" => url_params}}) do
-      case Urls.shorten_url(url_params) do
-        {:ok, slug } ->
-          conn
-          |> put_flash(:info, "Successfully created a short URL!")
-          |> redirect(to: Routes.url_path(conn, :index))
-
-        {:error, _changeset} ->
-          conn
-          |> put_flash(:error, "Invalid URL!")
-          |> redirect(to: Routes.url_path(conn, :index))
-      end
-  end
-
-  @doc"""
-  Redirects to the original URL when user inputs the shortened URL
-
-  If the slug is valid, increments clicks and redirects to original URL
-  If invalid, renders a 404 page
-  """
-  def show(conn, %{"slug" => slug}) do
-    case Urls.get_url_by_slug(slug) do
-      {:ok, original_url} ->
-        Urls.inc_click_count(slug)
-        redirect(conn, external: original_url)
-
-      {:error, _msg} ->
+  @spec new(Plug.Conn.t(), map()) :: Plug.Conn.t()
+  def create(conn, %{"url" => url_params}) do
+    case ShortenUrl.shorten_url(url_params) do
+      {:ok, slug} ->
         conn
-        |> put_status(:not_found)
-        |> put_view(ShorterWeb.ErrorView)
-      |> render("404.html")
+        |> assign(:original_url, url_params["original_url"])
+        |> assign(:slug, slug)
+        |> render(:new, changeset: Urls.change_url(%Url{}))
+
+      {:error, %Ecto.Changeset{} = changeset} ->
+        conn
+        |> assign(:original_url, url_params["original_url"])
+        |> assign(:slug, nil)
+        |> render(:new, changeset: changeset)
     end
   end
-
-
 end
