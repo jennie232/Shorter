@@ -17,7 +17,11 @@ defmodule ShorterWeb.Router do
   scope "/", ShorterWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    get "/", UrlController, :new
+    post "/", UrlController, :create
+    get "/:slug", RedirectController, :show
+    get "/stats", StatsController, :index
+    get "/stats:export", StatsController, :export
   end
 
   # Other scopes may use custom stacks.
