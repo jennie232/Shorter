@@ -1,16 +1,14 @@
 defmodule Shorter.Urls do
   @moduledoc """
-  Context module for managing URLs.
+  Urls context for managing/interacting with URLs.
   """
-
+  use Ecto.Schema
+  import Ecto.Query
   alias Shorter.Repo
-  alias Shorter.Url
+  alias Shorter.Schemas.Url
 
   @doc """
-  Returns a list of all Url records including:
-  - Shortened url
-  - Corresponding original url
-  - # of shortened url visits
+  Returns a list of all URL records
   """
   @spec list_urls() :: [Url.t()]
   def list_urls do
@@ -18,40 +16,62 @@ defmodule Shorter.Urls do
   end
 
   @doc """
-  Retrieves the Url record associated with the slug if it exists.
+  Retrieves the URL record associated with the slug if it exists and increments the click count.
   """
-  @spec get_url_by_slug(String.t()) :: {:ok, Url.t()} | {:error, String.t()}
+  @spec get_url_by_slug_and_increment_clicks(String.t()) :: {:ok, Url.t()} | {:error, :not_found}
+  def get_url_by_slug_and_increment_clicks(slug) do
+    case get_url_by_slug(slug) do
+      {:ok, url} ->
+        inc_click_count(url)
+        {:ok, url}
+
+      {:error, :not_found} = error ->
+        error
+    end
+  end
+
+  @doc """
+  Retrieves the URL record associated with the slug if it exists.
+  """
+  @spec get_url_by_slug(String.t()) :: {:ok, Url.t()} | {:error, :not_found}
   def get_url_by_slug(slug) do
     case Repo.get_by(Url, slug: slug) do
       %Url{} = url -> {:ok, url}
-      nil -> {:error, "URL not found"}
+      nil -> {:error, :not_found}
     end
   end
 
   @doc """
-  Shortens the original URL.
-  If the original URL already exists, returns the existing Url record.
+  Retrieves the URL record associated with the original URL if it exists
   """
-  @spec shorten_url(map()) :: {:ok, Url.t()} | {:error, Ecto.Changeset.t()}
-  def shorten_url(%{"original_url" => original_url} = attrs) do
+  @spec get_url_by_original(String.t()) :: {:ok, Url.t()} | {:error, :not_found}
+  def get_url_by_original(original_url) do
     case Repo.get_by(Url, original_url: original_url) do
-      nil ->
-        %Url{}
-        |> Url.changeset(attrs)
-        |> Repo.insert()
-
-      %Url{} = url ->
-        {:ok, url}
+      %Url{} = url -> {:ok, url}
+      nil -> {:error, :not_found}
     end
   end
 
   @doc """
-  Increments clicks when the short URL is used.
+  Creates a new URL record
   """
-  @spec inc_click_count(Url.t()) :: {:ok, Url.t()} | {:error, Ecto.Changeset.t()}
-  def inc_click_count(%Url{} = url) do
-    url
-    |> Url.changeset(%{clicks: url.clicks + 1})
-    |> Repo.update()
+  @spec create_url(map()) :: {:ok, Url.t()} | {:error, Ecto.Changeset.t()}
+  def create_url(attrs) do
+    %Url{}
+    |> Url.changeset(attrs)
+    |> Repo.insert()
+  end
+
+  @doc """
+  Creates the changeset for validating the URL record
+  """
+  @spec change_url(Url.t()) :: Ecto.Changeset.t()
+  def change_url(%Url{} = url) do
+    Url.changeset(url, %{})
+  end
+
+  defp inc_click_count(%Url{id: id}) do
+    from(u in Url, where: u.id == ^id, update: [inc: [clicks: 1]])
+    |> Repo.update_all([])
   end
 end

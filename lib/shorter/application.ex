@@ -17,7 +17,8 @@ defmodule Shorter.Application do
       # Start a worker by calling: Shorter.Worker.start_link(arg)
       # {Shorter.Worker, arg},
       # Start to serve requests, typically the last entry
-      ShorterWeb.Endpoint
+      ShorterWeb.Endpoint,
+      {Cachex, name: :slug_cache}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
