@@ -4,7 +4,7 @@ defmodule Shorter.Services.ShortenUrl do
   """
   alias Shorter.Schemas.Url
   alias Shorter.Urls
-  alias Shorter.Repo
+
 
   @doc """
   Shortens the original URL by generating and caching the slug.
@@ -26,7 +26,7 @@ defmodule Shorter.Services.ShortenUrl do
 
   defp handle_cache_miss(original_url, attrs) do
     case Urls.get_url_by_original(original_url) do
-      {:ok, %Url{slug: slug} = url} ->
+      {:ok, %Url{slug: slug} = _url} ->
         cache_slug(original_url, slug)
         {:ok, slug}
 

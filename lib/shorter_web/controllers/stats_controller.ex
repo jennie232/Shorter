@@ -1,7 +1,5 @@
 defmodule ShorterWeb.StatsController do
   use ShorterWeb, :controller
-
-  alias ShorterWeb.Router.Helpers, as: Routes
   alias Shorter.Urls
 
   def index(conn, _params) do

@@ -22,9 +22,7 @@ defmodule Shorter.Urls do
   def get_url_by_slug_and_increment_clicks(slug) do
     case get_url_by_slug(slug) do
       {:ok, url} ->
-        inc_click_count(url)
-
-        updated_url = Repo.get(Url, url.id)
+        updated_url = inc_click_count(url)
         {:ok, updated_url}
 
       {:error, :not_found} = error ->
@@ -61,15 +59,18 @@ defmodule Shorter.Urls do
     Url.changeset(url, %{})
   end
 
-  defp get_url_by_slug(slug) do
+  def get_url_by_slug(slug) do
     case Repo.get_by(Url, slug: slug) do
       %Url{} = url -> {:ok, url}
       nil -> {:error, :not_found}
     end
   end
 
-  defp inc_click_count(%Url{id: id}) do
-    from(u in Url, where: u.id == ^id, update: [inc: [clicks: 1]])
-    |> Repo.update_all([])
+  defp inc_click_count(%Url{id: id} = url) do
+    {1, [updated_url]} =
+      from(u in Url, where: u.id == ^id, select: u)
+      |> Repo.update_all(inc: [clicks: 1])
+
+    Map.put(url, :clicks, updated_url.clicks)
   end
 end
