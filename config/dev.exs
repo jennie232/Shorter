@@ -2,9 +2,9 @@ import Config
 
 # Configure your database
 config :shorter, Shorter.Repo,
-  username: "jennieyoun",
-  hostname: "localhost",
-  database: "urldb",
+  username: System.get_env("DATABASE_USERNAME"),
+  hostname: System.get_env("DATABASE_HOSTNAME"),
+  database: System.get_env("DATABASE_NAME"),
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
@@ -63,6 +63,8 @@ config :shorter, ShorterWeb.Endpoint,
 
 # Enable dev routes for dashboard and mailbox
 config :shorter, dev_routes: true
+
+config :shorter, base_url: "http://localhost:4000"
 
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"

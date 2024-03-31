@@ -55,6 +55,9 @@ defmodule Shorter.MixProject do
       {:telemetry_metrics, "~> 0.6"},
       {:telemetry_poller, "~> 1.0"},
       {:gettext, "~> 0.20"},
+      {:csv, "~> 3.2"},
+      {:nanoid, "~> 2.1.0"},
+      {:cachex, "~> 3.6"},
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
       {:bandit, "~> 1.2"}

@@ -2,7 +2,7 @@ defmodule Shorter.Urls do
   @moduledoc """
   Urls context for managing/interacting with URLs.
   """
-  use Ecto.Schema
+
   import Ecto.Query
   alias Shorter.Repo
   alias Shorter.Schemas.Url
@@ -23,21 +23,12 @@ defmodule Shorter.Urls do
     case get_url_by_slug(slug) do
       {:ok, url} ->
         inc_click_count(url)
-        {:ok, url}
+
+        updated_url = Repo.get(Url, url.id)
+        {:ok, updated_url}
 
       {:error, :not_found} = error ->
         error
-    end
-  end
-
-  @doc """
-  Retrieves the URL record associated with the slug if it exists.
-  """
-  @spec get_url_by_slug(String.t()) :: {:ok, Url.t()} | {:error, :not_found}
-  def get_url_by_slug(slug) do
-    case Repo.get_by(Url, slug: slug) do
-      %Url{} = url -> {:ok, url}
-      nil -> {:error, :not_found}
     end
   end
 
@@ -68,6 +59,13 @@ defmodule Shorter.Urls do
   @spec change_url(Url.t()) :: Ecto.Changeset.t()
   def change_url(%Url{} = url) do
     Url.changeset(url, %{})
+  end
+
+  defp get_url_by_slug(slug) do
+    case Repo.get_by(Url, slug: slug) do
+      %Url{} = url -> {:ok, url}
+      nil -> {:error, :not_found}
+    end
   end
 
   defp inc_click_count(%Url{id: id}) do

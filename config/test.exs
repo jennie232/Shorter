@@ -6,10 +6,9 @@ import Config
 # to provide built-in test partitioning in CI environment.
 # Run `mix help test` for more information.
 config :shorter, Shorter.Repo,
-  username: "postgres",
-  password: "postgres",
-  hostname: "localhost",
-  database: "shorter_test#{System.get_env("MIX_TEST_PARTITION")}",
+  username: System.get_env("DATABASE_USERNAME"),
+  hostname: System.get_env("DATABASE_HOSTNAME"),
+  database: System.get_env("DATABASE_NAME") <> "_test",
   pool: Ecto.Adapters.SQL.Sandbox,
   pool_size: System.schedulers_online() * 2
 
@@ -25,6 +24,8 @@ config :shorter, Shorter.Mailer, adapter: Swoosh.Adapters.Test
 
 # Disable swoosh api client as it is only required for production adapters.
 config :swoosh, :api_client, false
+
+config :shorter, base_url: "http://localhost:4000"
 
 # Print only warnings and errors during test
 config :logger, level: :warning

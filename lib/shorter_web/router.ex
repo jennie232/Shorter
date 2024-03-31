@@ -19,9 +19,9 @@ defmodule ShorterWeb.Router do
 
     get "/", UrlController, :new
     post "/", UrlController, :create
-    get "/:slug", RedirectController, :show
     get "/stats", StatsController, :index
-    get "/stats:export", StatsController, :export
+    get "/stats/export", StatsController, :export
+    get "/:slug", RedirectController, :show
   end
 
   # Other scopes may use custom stacks.
