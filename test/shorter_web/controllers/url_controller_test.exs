@@ -7,7 +7,6 @@ defmodule ShorterWeb.UrlControllerTest do
   @valid_attrs %{"original_url" => "https://validurl.com"}
   @invalid_attrs %{"original_url" => "invalid"}
 
-
   describe "new short URL" do
     test "renders the URL form", %{conn: conn} do
       conn = get(conn, "/")

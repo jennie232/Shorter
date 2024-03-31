@@ -19,6 +19,12 @@ defmodule Shorter.Schemas.UrlTest do
       assert errors_on(changeset) == %{original_url: ["URL scheme must be 'http' or 'https'"]}
     end
 
+    test "is invalid if scheme is missing" do
+      changeset = Url.changeset(%Url{}, %{@valid_attrs | original_url: "validurl.com"})
+      refute changeset.valid?
+      assert errors_on(changeset) == %{original_url: ["URL scheme is missing"]}
+    end
+
     test "is invalid if URL does not have host" do
       changeset = Url.changeset(%Url{}, %{@valid_attrs | original_url: "https://"})
       refute changeset.valid?
@@ -38,13 +44,13 @@ defmodule Shorter.Schemas.UrlTest do
     end
 
     test "is invalid if slug is nil" do
-      changeset = Url.changeset(%Url{},  %{@valid_attrs | slug: nil})
+      changeset = Url.changeset(%Url{}, %{@valid_attrs | slug: nil})
       refute changeset.valid?
       assert errors_on(changeset) == %{slug: ["can't be blank"]}
     end
 
     test "is invalid if slug is empty" do
-      changeset = Url.changeset(%Url{},  %{@valid_attrs | slug: ""})
+      changeset = Url.changeset(%Url{}, %{@valid_attrs | slug: ""})
       refute changeset.valid?
       assert errors_on(changeset) == %{slug: ["can't be blank"]}
     end

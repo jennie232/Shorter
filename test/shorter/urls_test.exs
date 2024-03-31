@@ -6,6 +6,10 @@ defmodule Shorter.UrlsTest do
   @valid_attrs %{"original_url" => "https://validurl.com", "slug" => "slug123"}
   @invalid_url "ht:/invalid"
 
+  setup do
+    {:ok, url: url_fixture()}
+  end
+
   def url_fixture(attrs \\ %{}) do
     {:ok, url} =
       attrs
@@ -17,29 +21,28 @@ defmodule Shorter.UrlsTest do
 
   describe "list_urls/0" do
     test "returns all urls" do
-      url_fixture()
-      url_fixture(%{"original_url" => "https://example.org", "slug" => "def456"})
-
+      url_fixture(%{"original_url" => "https://validurl.org", "slug" => "slug1234"})
       assert length(Urls.list_urls()) == 2
     end
   end
 
-  describe "get_url_by_slug/1" do
-    test "returns the original url associated with the slug" do
-      url = url_fixture()
-      assert {:ok, original_url} = Urls.get_url_by_slug(@valid_attrs["slug"])
-      assert original_url.id == url.id
+  describe "get_url_by_slug_and_increment_clicks/1" do
+    test "returns the original url associated with the slug and increments the click count", %{
+      url: url
+    } do
+      assert {:ok, retrieved_url} = Urls.get_url_by_slug_and_increment_clicks(url.slug)
+      assert retrieved_url.id == url.id
+      assert retrieved_url.clicks == 1
     end
 
     test "returns error when the slug doesn't exist" do
-      assert {:error, :not_found} = Urls.get_url_by_slug("invalid_slug")
+      assert {:error, :not_found} = Urls.get_url_by_slug_and_increment_clicks("invalid_slug")
     end
   end
 
   describe "get_url_by_original/1" do
-    test "returns the URL record given the original URL" do
-      url = url_fixture()
-      assert {:ok, %Url{} = retrieved_url} = Urls.get_url_by_original(url.original_url)
+    test "returns the URL record given the original URL", %{url: url} do
+      assert {:ok, retrieved_url} = Urls.get_url_by_original(url.original_url)
       assert retrieved_url.id == url.id
       assert retrieved_url.slug == url.slug
     end
@@ -51,38 +54,19 @@ defmodule Shorter.UrlsTest do
 
   describe "create_url/1" do
     test "creates a URL record" do
-      assert {:ok, %Url{} = retrieved_url} = Urls.create_url(@valid_attrs)
-      assert retrieved_url.original_url == @valid_attrs["original_url"]
-      assert retrieved_url.slug == @valid_attrs["slug"]
+      assert {:ok, %Url{} = retrieved_url} =
+               Urls.create_url(%{"original_url" => "https://validurl.org", "slug" => "slug1234"})
+
+      assert retrieved_url.original_url == "https://validurl.org"
+      assert retrieved_url.slug == "slug1234"
     end
 
     test "returns error when original_url is invalid" do
       assert {:error, %Ecto.Changeset{}} = Urls.create_url(%{"original_url" => @invalid_url})
     end
 
-    test "returns error when slug is not unique" do
-      url_fixture(%{"slug" => "duplicate"})
-      attrs = %{"original_url" => "https://example.com", "slug" => "duplicate"}
-      assert {:error, %Ecto.Changeset{}} = Urls.create_url(attrs)
-    end
-  end
-
-  describe "inc_click_count/1" do
-    test "increments the click count of the URL record" do
-      {:ok, url} = Urls.create_url(@valid_attrs)
-
-      assert {:ok, :increment} = Urls.inc_click_count(url.id)
-
-      assert {:ok, %Url{clicks: 1}} = Urls.get_url_by_original(@valid_attrs["original_url"])
-    end
-
-    test "returns the accurate click count" do
-       {:ok, url} = Urls.create_url(@valid_attrs)
-
-       Urls.inc_click_count(url.id)
-       Urls.inc_click_count(url.id)
-
-       assert {:ok, %Url{clicks: 2}} = Urls.get_url_by_original(@valid_attrs["original_url"])
+    test "returns error when slug is not unique", %{url: url} do
+      assert {:error, %Ecto.Changeset{}} = Urls.create_url(%{"original_url" => "https://validurl.org", "slug" => url.slug})
     end
   end
 end
