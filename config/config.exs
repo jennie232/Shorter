@@ -14,6 +14,7 @@ config :shorter,
 # Configures the endpoint
 config :shorter, ShorterWeb.Endpoint,
   url: [host: "localhost"],
+  http: [port: 4000],
   adapter: Bandit.PhoenixAdapter,
   render_errors: [
     formats: [html: ShorterWeb.ErrorHTML, json: ShorterWeb.ErrorJSON],
@@ -30,7 +31,7 @@ config :shorter, ShorterWeb.Endpoint,
 # For production it's recommended to configure a different adapter
 # at the `config/runtime.exs`.
 config :shorter, Shorter.Mailer, adapter: Swoosh.Adapters.Local
-
+config :cachex, :slug_cache, limit: 10_000
 # Configure esbuild (the version is required)
 config :esbuild,
   version: "0.17.11",
