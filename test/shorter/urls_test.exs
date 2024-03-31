@@ -66,7 +66,8 @@ defmodule Shorter.UrlsTest do
     end
 
     test "returns error when slug is not unique", %{url: url} do
-      assert {:error, %Ecto.Changeset{}} = Urls.create_url(%{"original_url" => "https://validurl.org", "slug" => url.slug})
+      assert {:error, %Ecto.Changeset{}} =
+               Urls.create_url(%{"original_url" => "https://validurl.org", "slug" => url.slug})
     end
   end
 end

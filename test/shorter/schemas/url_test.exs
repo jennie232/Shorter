@@ -1,7 +1,6 @@
 defmodule Shorter.Schemas.UrlTest do
   use ExUnit.Case
   use Shorter.DataCase
-  import Ecto.Changeset
   alias Shorter.Schemas.Url
 
   describe "URL validations" do

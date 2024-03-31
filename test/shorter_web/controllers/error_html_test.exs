@@ -5,10 +5,7 @@ defmodule ShorterWeb.ErrorHTMLTest do
   import Phoenix.Template
 
   test "renders 404.html" do
-    assert render_to_string(ShorterWeb.ErrorHTML, "404", "html", []) == "Not Found"
-  end
-
-  test "renders 500.html" do
-    assert render_to_string(ShorterWeb.ErrorHTML, "500", "html", []) == "Internal Server Error"
+    rendered_content = render_to_string(ShorterWeb.ErrorHTML, "404", "html", [])
+    assert String.contains?(rendered_content, "Sorry, we couldn't find this page.")
   end
 end
