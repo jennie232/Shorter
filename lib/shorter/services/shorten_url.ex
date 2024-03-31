@@ -5,7 +5,6 @@ defmodule Shorter.Services.ShortenUrl do
   alias Shorter.Schemas.Url
   alias Shorter.Urls
 
-
   @doc """
   Shortens the original URL by generating and caching the slug.
 
