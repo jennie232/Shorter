@@ -44,4 +44,4 @@ jobs:
       run: docker-compose -f docker-compose.test.yml run --rm app mix ecto.setup
 
     - name: Run tests
-      run: docker-compose -f docker-compose.test.yml run --rm app mix test
+      run: docker-compose -f docker-compose.test.yml run --rm --entrypoint "/bin/bash" app -c "mix test"
