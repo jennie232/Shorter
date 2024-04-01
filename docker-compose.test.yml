@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      MIX_ENV: test
+      DATABASE_HOSTNAME: db_test
+      DATABASE_USERNAME: postgres
+      DATABASE_PASSWORD: postgres
+      DATABASE_NAME: shorter_test
+    depends_on:
+      - db_test
+    volumes:
+      - .:/shorter
+
+  db_test:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: shorter_test
+    volumes:
+      - postgres_data_test:/var/lib/postgresql/data
+
+volumes:
+  postgres_data_test:

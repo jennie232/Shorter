@@ -3,6 +3,7 @@ import Config
 # Configure your database
 config :shorter, Shorter.Repo,
   username: System.get_env("DATABASE_USERNAME"),
+  password: System.get_env("DATABASE_PASSWORD"),
   hostname: System.get_env("DATABASE_HOSTNAME"),
   database: System.get_env("DATABASE_NAME"),
   stacktrace: true,
@@ -18,7 +19,7 @@ config :shorter, Shorter.Repo,
 config :shorter, ShorterWeb.Endpoint,
   # Binding to loopback ipv4 address prevents access from other machines.
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
-  http: [ip: {127, 0, 0, 1}, port: 4000],
+  http: [ip: {0, 0, 0, 0}, port: 4000],
   check_origin: false,
   code_reloader: true,
   debug_errors: true,

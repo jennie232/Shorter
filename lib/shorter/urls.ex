@@ -62,7 +62,7 @@ defmodule Shorter.Urls do
   @doc """
   Retrieves the URL record associated with the slug if it exists.
   """
-  @spec get_url_by_slug(String.t()) :: {:ok, %Url{}} | {:error, not_found}
+  @spec get_url_by_slug(String.t()) :: {:ok, %Url{}} | {:error, :not_found}
   def get_url_by_slug(slug) do
     case Repo.get_by(Url, slug: slug) do
       %Url{} = url -> {:ok, url}

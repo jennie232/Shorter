@@ -8,7 +8,8 @@ import Config
 config :shorter, Shorter.Repo,
   username: System.get_env("DATABASE_USERNAME"),
   hostname: System.get_env("DATABASE_HOSTNAME"),
-  database: System.get_env("DATABASE_NAME") <> "_test",
+  password: System.get_env("DATABASE_PASSWORD"),
+  database: System.get_env("DATABASE_NAME"),
   pool: Ecto.Adapters.SQL.Sandbox,
   pool_size: System.schedulers_online() * 2
 
