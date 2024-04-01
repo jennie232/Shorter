@@ -13,7 +13,8 @@ defmodule ShorterWeb.RedirectControllerTest do
   end
 
   describe "show original URL" do
-    test "redirects to the original URL and increments click count when a valid slug is provided", %{conn: conn, url1: url1} do
+    test "redirects to the original URL and increments click count when a valid slug is provided",
+         %{conn: conn, url1: url1} do
       conn = get(conn, "/#{url1.slug}")
       assert redirected_to(conn) == url1.original_url
       assert conn.status == 302
