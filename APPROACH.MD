@@ -11,6 +11,7 @@ Throughout the development process, I kept a few key design principles in mind:
 ## URL Validation
 
 To ensure data integrity, I validated the original URLs to assert:
+
 - The URL can't be empty
 - The scheme must be http or https
 - The host can't be nil or have a length of 0
@@ -40,20 +41,27 @@ These choices help ensure that Shorter performs well, even under heavy traffic.
 I designed Shorter's UI with user experience in mind:
 
 - For invalid URLs, I display a generic error message with an example of the correct format, similar to popular URL shorteners like Bitly and TinyURL. I removed `Phoenix.Flash.get` since users don't need to see technical flash messages.
+
 - If a user tries to access a non-existent short URL, they're redirected to a custom 404 page.
+
 - The order of routes matters: putting the `/:slug` route last is crucial, otherwise `/stats` gets treated as a slug and triggers a 404.
 
 These UI decisions prioritize clarity and a positive user experience, aligning with Shorter's design principles.
 
-User Authentication and Short URL Generation
-In the current implementation of Shorter, I made the decision to output the same short URL for duplicate original URLs. This approach ensures that the same original URL always maps to the same short URL, regardless of the user who created it. 
-However, if the app incorporates user authentication in the future, the approach would likely change, since each logged-in user would expect to have their own set of short URLs, even if the original URLs are the same as those created by other users. 
-In this scenario, the short URL generation would need to consider the user's identity to provide a personalized experience and enable user-specific analytics tracking.
+## User Authentication and Short URL Generation
+
+In the current implementation of Shorter, I made the decision to output the same short URL for duplicate original URLs. This approach ensures that the same original URL always maps to the same short URL, regardless of the user who created it.
+
+However, if the app incorporates user authentication in the future, the approach would likely change. With user accounts, each logged-in user would expect to have their own set of short URLs, even if the original URLs are the same as those created by other users. In this scenario, the short URL generation would need to consider the user's identity to provide a personalized experience and enable user-specific analytics tracking.
+
+By generating the same short URL for duplicate original URLs in the current version of Shorter, I aimed to keep the system simple and focused on the core functionality of URL shortening. As the application evolves and user-specific features are introduced, the short URL generation strategy can be adapted accordingly.
 
 ## Docker Compose Setup
 
-I decided to use two separate docker-compose files: one for development and one for testing. This separation allows for a cleaner and more focused setup for each environment.
-The development docker-compose file includes the necessary services and configurations for running the application during development, such as the web server and database.
-On the other hand, the testing docker-compose file is specifically tailored for running tests. It includes the required services and configurations for the testing environment, ensuring that tests are run in isolation and with the appropriate setup.
-By using separate docker-compose files, I can maintain a clear separation between development and testing environments, making it easier to manage dependencies, configurations, and resource allocation for each purpose.
+I decided to use two separate Docker Compose files: one for development and one for testing. This separation allows for a cleaner and more focused setup for each environment.
 
+The development Docker Compose file includes the necessary services and configurations for running the application during development, such as the web server and database.
+
+On the other hand, the testing Docker Compose file is specifically tailored for running tests. It includes the required services and configurations for the testing environment, ensuring that tests are run in isolation and with the appropriate setup.
+
+By using separate Docker Compose files, I can maintain a clear separation between development and testing environments, making it easier to manage dependencies, configurations, and resource allocation for each purpose.
