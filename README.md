@@ -48,4 +48,4 @@ The workflow performs the following steps:
 
 ## Approach
 
-For a detailed explanation of the approach and design decisions made in this project, please refer to the [APPROACH.md](APPROACH.md) file.
+For a detailed explanation of the approach and design decisions made in this project, please refer to the [APPROACH.MD](/APPROACH.MD) file.
