@@ -34,7 +34,7 @@ Shorter is a URL shortener application built with Elixir and Phoenix. It allows 
 
     # build and run the tests
     docker-compose -f docker-compose.test.yml build
-    docker-compose -f docker-compose.test.yml run --rm app mix test
+    docker-compose -f docker-compose.test.yml run --rm app mix deps.get
     ```
 
 ## CI/CD
