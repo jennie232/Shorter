@@ -8,7 +8,7 @@ defmodule Shorter.Urls do
   alias Shorter.Schemas.Url
 
   @doc """
-  Returns a list of all URL records
+  Returns a list of all URL records.
   """
   @spec list_urls() :: [Url.t()]
   def list_urls do
@@ -31,7 +31,7 @@ defmodule Shorter.Urls do
   end
 
   @doc """
-  Retrieves the URL record associated with the original URL if it exists
+  Retrieves the URL record associated with the original URL if it exists.
   """
   @spec get_url_by_original(String.t()) :: {:ok, Url.t()} | {:error, :not_found}
   def get_url_by_original(original_url) do
@@ -42,7 +42,7 @@ defmodule Shorter.Urls do
   end
 
   @doc """
-  Creates a new URL record
+  Creates a new URL record.
   """
   @spec create_url(map()) :: {:ok, Url.t()} | {:error, Ecto.Changeset.t()}
   def create_url(attrs) do
@@ -52,13 +52,17 @@ defmodule Shorter.Urls do
   end
 
   @doc """
-  Creates the changeset for validating the URL record
+  Creates the changeset for validating the URL record.
   """
   @spec change_url(Url.t()) :: Ecto.Changeset.t()
   def change_url(%Url{} = url) do
     Url.changeset(url, %{})
   end
 
+  @doc """
+  Retrieves the URL record associated with the slug if it exists.
+  """
+  @spec get_url_by_slug(String.t()) :: {:ok, %Url{}} | {:error, not_found}
   def get_url_by_slug(slug) do
     case Repo.get_by(Url, slug: slug) do
       %Url{} = url -> {:ok, url}

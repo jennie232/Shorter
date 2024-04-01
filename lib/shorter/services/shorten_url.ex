@@ -51,7 +51,7 @@ defmodule Shorter.Services.ShortenUrl do
   end
 
   @doc """
-  Creates a unique slug using Nanoid of size 8. If the slug is not unique, generate another slug
+  Creates a unique slug using Nanoid of size 8. If the slug is not unique, generate another slug.
   """
   @spec generate_slug() :: String.t()
   def generate_slug do
