@@ -2,9 +2,9 @@ name: Shorter CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build-and-test:
@@ -28,9 +28,20 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Set up Elixir
+      uses: erlef/setup-elixir@v1
+      with:
+        elixir-version: '1.16.2' # Define the Elixir version
+        otp-version: '24.3' # Define the OTP version
+
     - name: Build the Docker environment
       run: docker-compose -f docker-compose.test.yml build
 
-    - name: Run migrations and tests
-      run: |
-        docker-compose -f docker-compose.test.yml run --rm --entrypoint "" app /bin/bash -c "mix ecto.setup && mix test"
+    - name: Fetch and Compile Dependencies
+      run: docker-compose -f docker-compose.test.yml run --rm --entrypoint "/bin/bash" app -c "mix local.hex --force && mix local.rebar --force && mix deps.get && mix deps.compile"
+
+    - name: Run migrations
+      run: docker-compose -f docker-compose.test.yml run --rm app mix ecto.setup
+
+    - name: Run tests
+      run: docker-compose -f docker-compose.test.yml run --rm app mix test
