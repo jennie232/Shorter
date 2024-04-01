@@ -42,8 +42,12 @@ defmodule ShorterWeb.StatsControllerTest do
       assert conn.resp_body =~ url2.original_url
       assert conn.resp_body =~ "#{Application.fetch_env!(:shorter, :base_url)}/#{url1.slug}"
       assert conn.resp_body =~ "#{Application.fetch_env!(:shorter, :base_url)}/#{url2.slug}"
-      assert conn.resp_body =~ "0,#{url1.inserted_at |> NaiveDateTime.to_date() |> Date.to_string()}"
-      assert conn.resp_body =~ "0,#{url2.inserted_at |> NaiveDateTime.to_date() |> Date.to_string()}"
+
+      assert conn.resp_body =~
+               "0,#{url1.inserted_at |> NaiveDateTime.to_date() |> Date.to_string()}"
+
+      assert conn.resp_body =~
+               "0,#{url2.inserted_at |> NaiveDateTime.to_date() |> Date.to_string()}"
     end
   end
 end

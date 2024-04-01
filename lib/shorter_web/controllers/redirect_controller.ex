@@ -1,10 +1,13 @@
 defmodule ShorterWeb.RedirectController do
+  @moduledoc """
+  Controller for handling redirect to original URL
+  """
   use ShorterWeb, :controller
 
   alias Shorter.Urls
 
   @doc """
-  Redirects to the original URL when user inputs short URL
+  Redirects to the original URL when user inputs short URL.
   """
   @spec show(Plug.Conn.t(), map()) :: Plug.Conn.t()
   def show(conn, %{"slug" => slug}) do

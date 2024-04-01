@@ -19,7 +19,7 @@ defmodule ShorterWeb.UrlController do
   end
 
   @doc """
-  Handles the form submissions
+  Handles the form submissions and displays the shortened URL and original URL.
   """
   @spec new(Plug.Conn.t(), map()) :: Plug.Conn.t()
   def create(conn, %{"url" => url_params}) do
