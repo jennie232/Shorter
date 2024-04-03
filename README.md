@@ -47,5 +47,10 @@ The workflow performs the following steps:
 3. Executes the tests
 
 ## Approach
-
 For a detailed explanation of the approach and design decisions made in this project, please refer to the [APPROACH.MD](/APPROACH.MD) file.
+
+#### Updated Frontend
+I've made updates to the frontend, which are available on the `updated-shorter` branch. These changes aim to improve user experience. (I may also update some backend logic in the very near future). If you're interested, please run the following command after cloning the repo:
+ ```bash
+git checkout updated-shorter
+ ```
