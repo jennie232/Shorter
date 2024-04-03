@@ -1,286 +1,291 @@
-2024-03-31 22:35:16,578 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
-2024-03-31 22:35:16,627 INFO o.a.j.JMeter: Loading user properties from: /usr/local/Cellar/jmeter/5.6.3/libexec/bin/user.properties
-2024-03-31 22:35:16,628 INFO o.a.j.JMeter: Loading system properties from: /usr/local/Cellar/jmeter/5.6.3/libexec/bin/system.properties
-2024-03-31 22:35:16,636 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
-2024-03-31 22:35:16,637 INFO o.a.j.JMeter: Version 5.6.3
-2024-03-31 22:35:16,637 INFO o.a.j.JMeter: java.version=21.0.2
-2024-03-31 22:35:16,637 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
-2024-03-31 22:35:16,637 INFO o.a.j.JMeter: os.name=Mac OS X
-2024-03-31 22:35:16,637 INFO o.a.j.JMeter: os.arch=x86_64
-2024-03-31 22:35:16,637 INFO o.a.j.JMeter: os.version=13.6.3
-2024-03-31 22:35:16,637 INFO o.a.j.JMeter: file.encoding=UTF-8
-2024-03-31 22:35:16,637 INFO o.a.j.JMeter: java.awt.headless=null
-2024-03-31 22:35:16,637 INFO o.a.j.JMeter: Max memory     =1073741824
-2024-03-31 22:35:16,638 INFO o.a.j.JMeter: Available Processors =16
-2024-03-31 22:35:16,658 INFO o.a.j.JMeter: Default Locale=English (EN)
-2024-03-31 22:35:16,658 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
-2024-03-31 22:35:16,658 INFO o.a.j.JMeter: JMeterHome=/usr/local/Cellar/jmeter/5.6.3/libexec
-2024-03-31 22:35:16,658 INFO o.a.j.JMeter: user.dir  =/Users/jennieyoun/Downloads/url_shortener/shorter
-2024-03-31 22:35:16,659 INFO o.a.j.JMeter: PWD       =/Users/jennieyoun/Downloads/url_shortener/shorter
-2024-03-31 22:35:16,665 INFO o.a.j.JMeter: IP: 192.168.1.78 Name: Jennies-MBP.attlocal.net FullName: jennies-mbp.attlocal.net
-2024-03-31 22:35:16,690 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
-2024-03-31 22:35:17,432 INFO o.a.j.JMeterGuiLauncher: Setting LAF to: com.github.weisj.darklaf.DarkLaf:com.github.weisj.darklaf.theme.DarculaTheme
-2024-03-31 22:35:20,774 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.action.Command], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
-2024-03-31 22:35:20,982 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.plugin.MenuCreator], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
-2024-03-31 22:35:21,138 INFO o.j.r.JARSourceHTTP: Requesting https://jmeter-plugins.org/repo/?installID=mac_os_x-fe89866ddaa6f0f2f241b15773e99074-gui
-2024-03-31 22:35:22,353 INFO o.j.r.PluginManager: Plugins Status: [jpgc-plugins-manager=1.9, jmeter-core=5.6.3, jmeter-ftp=5.6.3, jmeter-http=5.6.3, jmeter-jdbc=5.6.3, jmeter-jms=5.6.3, jmeter-junit=5.6.3, jmeter-java=5.6.3, jmeter-ldap=5.6.3, jmeter-mail=5.6.3, jmeter-mongodb=5.6.3, jmeter-native=5.6.3, jmeter-tcp=5.6.3, jmeter-components=5.6.3]
-2024-03-31 22:35:22,355 INFO o.j.r.PluginManagerMenuItem: Plugins Manager has upgrades: [jpgc-plugins-manager]
-2024-03-31 22:36:24,018 INFO o.a.j.s.FileServer: Default base='/Users/jennieyoun/Downloads/url_shortener/shorter'
-2024-03-31 22:36:24,026 INFO o.a.j.g.a.Load: Loading file: /Users/jennieyoun/Downloads/Test Plan.jmx
-2024-03-31 22:36:24,027 INFO o.a.j.s.FileServer: Set new base='/Users/jennieyoun/Downloads'
-2024-03-31 22:36:24,274 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
-2024-03-31 22:36:24,282 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
-2024-03-31 22:36:24,284 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
-2024-03-31 22:36:24,286 INFO o.a.j.s.SaveService: Loading file: /Users/jennieyoun/Downloads/Test Plan.jmx
-2024-03-31 22:36:24,428 INFO o.a.j.p.h.c.CookieManager: Settings: Delete null: true Check: true Allow variable: true Save: false Prefix: COOKIE_
-2024-03-31 22:36:24,434 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2024-03-31 22:36:24,434 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2024-03-31 22:36:24,435 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2024-03-31 22:36:24,435 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2024-03-31 22:36:24,435 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
-2024-03-31 22:36:24,435 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
-2024-03-31 22:36:24,808 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
-2024-03-31 22:36:24,809 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
-2024-03-31 22:36:24,809 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
-2024-03-31 22:36:24,809 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
-2024-03-31 22:36:24,949 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.visualizers.ResultRenderer], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
-2024-03-31 22:36:24,973 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.visualizers.RequestView], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
-2024-03-31 22:36:25,242 INFO o.a.j.s.FileServer: Set new base='/Users/jennieyoun/Downloads'
-2024-03-31 22:36:50,093 INFO o.a.j.e.StandardJMeterEngine: Running the test!
-2024-03-31 22:36:50,094 INFO o.a.j.s.SampleEvent: List of sample_variables: []
-2024-03-31 22:36:50,094 INFO o.a.j.s.SampleEvent: List of sample_variables: []
-2024-03-31 22:36:50,095 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
-2024-03-31 22:36:50,095 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
-2024-03-31 22:36:50,137 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
-2024-03-31 22:36:50,144 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
-2024-03-31 22:36:50,213 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Submission Form Requests
-2024-03-31 22:36:50,213 INFO o.a.j.e.StandardJMeterEngine: Starting 5 threads for group Submission Form Requests.
-2024-03-31 22:36:50,214 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
-2024-03-31 22:36:50,214 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=5 ramp-up=1 delayedStart=false
-2024-03-31 22:36:50,220 INFO o.a.j.t.ThreadGroup: Started thread group number 1
-2024-03-31 22:36:50,220 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
-2024-03-31 22:36:50,223 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-1
-2024-03-31 22:36:50,225 INFO o.a.j.s.FileServer: Stored: /Users/jennieyoun/Downloads/url - Sheet1.csv
-2024-03-31 22:36:50,243 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = Jennies-MBP.attlocal.net
-2024-03-31 22:36:50,250 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
-2024-03-31 22:36:50,420 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-2
-2024-03-31 22:36:50,619 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-3
-2024-03-31 22:36:50,729 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-1
-2024-03-31 22:36:50,730 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-1
-2024-03-31 22:36:50,822 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-4
-2024-03-31 22:36:50,926 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-2
-2024-03-31 22:36:50,927 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-2
-2024-03-31 22:36:51,020 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-5
-2024-03-31 22:36:51,324 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-3
-2024-03-31 22:36:51,324 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-3
-2024-03-31 22:36:51,521 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-4
-2024-03-31 22:36:51,522 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-4
-2024-03-31 22:36:51,691 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-5
-2024-03-31 22:36:51,691 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-5
-2024-03-31 22:36:51,692 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
-2024-03-31 22:36:51,692 INFO o.a.j.s.FileServer: Close: /Users/jennieyoun/Downloads/url - Sheet1.csv
-2024-03-31 22:36:51,696 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
-2024-03-31 22:38:39,037 INFO o.a.j.e.StandardJMeterEngine: Running the test!
-2024-03-31 22:38:39,041 INFO o.a.j.s.SampleEvent: List of sample_variables: []
-2024-03-31 22:38:39,044 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
-2024-03-31 22:38:39,241 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Submission Form Requests
-2024-03-31 22:38:39,242 INFO o.a.j.e.StandardJMeterEngine: Starting 5 threads for group Submission Form Requests.
-2024-03-31 22:38:39,242 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
-2024-03-31 22:38:39,242 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=5 ramp-up=1 delayedStart=false
-2024-03-31 22:38:39,244 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-1
-2024-03-31 22:38:39,246 INFO o.a.j.s.FileServer: Stored: /Users/jennieyoun/Downloads/url - Sheet1.csv
-2024-03-31 22:38:39,248 INFO o.a.j.t.ThreadGroup: Started thread group number 1
-2024-03-31 22:38:39,248 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
-2024-03-31 22:38:39,445 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-2
-2024-03-31 22:38:39,638 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-1
-2024-03-31 22:38:39,639 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-1
-2024-03-31 22:38:39,645 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-3
-2024-03-31 22:38:39,847 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-4
-2024-03-31 22:38:39,910 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-2
-2024-03-31 22:38:39,910 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-2
-2024-03-31 22:38:40,044 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-5
-2024-03-31 22:38:40,116 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-3
-2024-03-31 22:38:40,117 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-3
-2024-03-31 22:38:40,306 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-4
-2024-03-31 22:38:40,307 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-4
-2024-03-31 22:38:40,526 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-5
-2024-03-31 22:38:40,528 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-5
-2024-03-31 22:38:40,530 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
-2024-03-31 22:38:40,531 INFO o.a.j.s.FileServer: Close: /Users/jennieyoun/Downloads/url - Sheet1.csv
-2024-03-31 22:38:40,531 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
-2024-03-31 22:39:21,761 INFO o.a.j.e.StandardJMeterEngine: Running the test!
-2024-03-31 22:39:21,766 INFO o.a.j.s.SampleEvent: List of sample_variables: []
-2024-03-31 22:39:21,769 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
-2024-03-31 22:39:21,919 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Submission Form Requests
-2024-03-31 22:39:21,919 INFO o.a.j.e.StandardJMeterEngine: Starting 20 threads for group Submission Form Requests.
-2024-03-31 22:39:21,919 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
-2024-03-31 22:39:21,919 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=20 ramp-up=3 delayedStart=false
-2024-03-31 22:39:21,922 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-1
-2024-03-31 22:39:21,923 INFO o.a.j.s.FileServer: Stored: /Users/jennieyoun/Downloads/url - Sheet1.csv
-2024-03-31 22:39:21,935 INFO o.a.j.t.ThreadGroup: Started thread group number 1
-2024-03-31 22:39:21,935 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
-2024-03-31 22:39:22,075 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-2
-2024-03-31 22:39:22,178 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-1
-2024-03-31 22:39:22,180 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-1
-2024-03-31 22:39:22,224 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-3
-2024-03-31 22:39:22,373 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-4
-2024-03-31 22:39:22,523 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-5
-2024-03-31 22:39:22,585 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-2
-2024-03-31 22:39:22,586 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-2
-2024-03-31 22:39:22,672 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-6
-2024-03-31 22:39:22,699 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-3
-2024-03-31 22:39:22,699 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-3
-2024-03-31 22:39:22,823 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-7
-2024-03-31 22:39:22,970 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-8
-2024-03-31 22:39:23,024 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-4
-2024-03-31 22:39:23,026 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-4
-2024-03-31 22:39:23,122 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-9
-2024-03-31 22:39:23,182 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-5
-2024-03-31 22:39:23,183 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-5
-2024-03-31 22:39:23,273 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-10
-2024-03-31 22:39:23,327 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-6
-2024-03-31 22:39:23,329 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-6
-2024-03-31 22:39:23,424 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-11
-2024-03-31 22:39:23,573 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-12
-2024-03-31 22:39:23,684 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-7
-2024-03-31 22:39:23,684 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-7
-2024-03-31 22:39:23,722 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-13
-2024-03-31 22:39:23,850 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-8
-2024-03-31 22:39:23,850 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-8
-2024-03-31 22:39:23,874 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-14
-2024-03-31 22:39:24,001 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-9
-2024-03-31 22:39:24,002 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-9
-2024-03-31 22:39:24,025 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-15
-2024-03-31 22:39:24,150 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-10
-2024-03-31 22:39:24,150 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-10
-2024-03-31 22:39:24,173 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-16
-2024-03-31 22:39:24,322 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-17
-2024-03-31 22:39:24,473 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-18
-2024-03-31 22:39:24,485 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-11
-2024-03-31 22:39:24,486 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-11
-2024-03-31 22:39:24,623 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-19
-2024-03-31 22:39:24,773 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-20
-2024-03-31 22:39:24,817 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-12
-2024-03-31 22:39:24,818 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-12
-2024-03-31 22:39:24,976 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-13
-2024-03-31 22:39:24,977 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-13
-2024-03-31 22:39:25,122 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-14
-2024-03-31 22:39:25,122 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-14
-2024-03-31 22:39:25,283 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-15
-2024-03-31 22:39:25,283 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-15
-2024-03-31 22:39:25,412 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-16
-2024-03-31 22:39:25,413 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-16
-2024-03-31 22:39:25,755 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-17
-2024-03-31 22:39:25,755 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-17
-2024-03-31 22:39:25,915 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-18
-2024-03-31 22:39:25,915 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-18
-2024-03-31 22:39:26,270 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-19
-2024-03-31 22:39:26,271 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-19
-2024-03-31 22:39:26,409 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-20
-2024-03-31 22:39:26,409 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-20
-2024-03-31 22:39:26,410 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
-2024-03-31 22:39:26,410 INFO o.a.j.s.FileServer: Close: /Users/jennieyoun/Downloads/url - Sheet1.csv
-2024-03-31 22:39:26,411 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
-2024-03-31 22:40:08,832 INFO o.a.j.e.StandardJMeterEngine: Running the test!
-2024-03-31 22:40:08,837 INFO o.a.j.s.SampleEvent: List of sample_variables: []
-2024-03-31 22:40:08,839 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
-2024-03-31 22:40:08,988 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Submission Form Requests
-2024-03-31 22:40:08,988 INFO o.a.j.e.StandardJMeterEngine: Starting 30 threads for group Submission Form Requests.
-2024-03-31 22:40:08,988 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
-2024-03-31 22:40:08,988 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=30 ramp-up=2 delayedStart=false
-2024-03-31 22:40:08,992 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-1
-2024-03-31 22:40:08,993 INFO o.a.j.s.FileServer: Stored: /Users/jennieyoun/Downloads/url - Sheet1.csv
-2024-03-31 22:40:09,022 INFO o.a.j.t.ThreadGroup: Started thread group number 1
-2024-03-31 22:40:09,022 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
-2024-03-31 22:40:09,062 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-2
-2024-03-31 22:40:09,130 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-3
-2024-03-31 22:40:09,204 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-4
-2024-03-31 22:40:09,260 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-5
-2024-03-31 22:40:09,328 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-6
-2024-03-31 22:40:09,392 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-7
-2024-03-31 22:40:09,463 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-8
-2024-03-31 22:40:09,530 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-9
-2024-03-31 22:40:09,593 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-10
-2024-03-31 22:40:09,668 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-11
-2024-03-31 22:40:09,733 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-12
-2024-03-31 22:40:09,795 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-13
-2024-03-31 22:40:09,813 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-2
-2024-03-31 22:40:09,814 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-2
-2024-03-31 22:40:09,864 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-14
-2024-03-31 22:40:09,884 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-1
-2024-03-31 22:40:09,884 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-1
-2024-03-31 22:40:09,932 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-15
-2024-03-31 22:40:09,997 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-16
-2024-03-31 22:40:10,065 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-17
-2024-03-31 22:40:10,133 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-18
-2024-03-31 22:40:10,184 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-3
-2024-03-31 22:40:10,184 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-3
-2024-03-31 22:40:10,203 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-19
-2024-03-31 22:40:10,267 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-20
-2024-03-31 22:40:10,310 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-4
-2024-03-31 22:40:10,311 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-4
-2024-03-31 22:40:10,330 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-21
-2024-03-31 22:40:10,400 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-22
-2024-03-31 22:40:10,465 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-23
-2024-03-31 22:40:10,524 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-5
-2024-03-31 22:40:10,524 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-5
-2024-03-31 22:40:10,533 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-24
-2024-03-31 22:40:10,597 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-25
-2024-03-31 22:40:10,601 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-6
-2024-03-31 22:40:10,601 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-6
-2024-03-31 22:40:10,665 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-26
-2024-03-31 22:40:10,735 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-27
-2024-03-31 22:40:10,799 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-28
-2024-03-31 22:40:10,867 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-7
-2024-03-31 22:40:10,866 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-29
-2024-03-31 22:40:10,868 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-7
-2024-03-31 22:40:10,935 INFO o.a.j.t.JMeterThread: Thread started: Submission Form Requests 1-30
-2024-03-31 22:40:11,124 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-8
-2024-03-31 22:40:11,125 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-8
-2024-03-31 22:40:11,373 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-9
-2024-03-31 22:40:11,374 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-9
-2024-03-31 22:40:11,633 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-10
-2024-03-31 22:40:11,633 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-10
-2024-03-31 22:40:12,104 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-11
-2024-03-31 22:40:12,105 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-11
-2024-03-31 22:40:12,179 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-12
-2024-03-31 22:40:12,179 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-12
-2024-03-31 22:40:12,284 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-13
-2024-03-31 22:40:12,285 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-13
-2024-03-31 22:40:12,509 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-14
-2024-03-31 22:40:12,509 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-14
-2024-03-31 22:40:12,571 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-15
-2024-03-31 22:40:12,571 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-15
-2024-03-31 22:40:13,031 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-16
-2024-03-31 22:40:13,031 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-16
-2024-03-31 22:40:13,104 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-17
-2024-03-31 22:40:13,105 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-17
-2024-03-31 22:40:13,368 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-18
-2024-03-31 22:40:13,368 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-18
-2024-03-31 22:40:13,641 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-19
-2024-03-31 22:40:13,641 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-19
-2024-03-31 22:40:13,708 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-20
-2024-03-31 22:40:13,709 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-20
-2024-03-31 22:40:13,787 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-21
-2024-03-31 22:40:13,788 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-21
-2024-03-31 22:40:14,061 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-22
-2024-03-31 22:40:14,061 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-22
-2024-03-31 22:40:14,316 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-23
-2024-03-31 22:40:14,317 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-23
-2024-03-31 22:40:14,383 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-24
-2024-03-31 22:40:14,383 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-24
-2024-03-31 22:40:14,637 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-25
-2024-03-31 22:40:14,637 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-25
-2024-03-31 22:40:14,707 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-26
-2024-03-31 22:40:14,707 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-26
-2024-03-31 22:40:15,165 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-27
-2024-03-31 22:40:15,165 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-27
-2024-03-31 22:40:15,257 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-28
-2024-03-31 22:40:15,257 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-28
-2024-03-31 22:40:15,501 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-29
-2024-03-31 22:40:15,501 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-29
-2024-03-31 22:40:15,569 INFO o.a.j.t.JMeterThread: Thread is done: Submission Form Requests 1-30
-2024-03-31 22:40:15,569 INFO o.a.j.t.JMeterThread: Thread finished: Submission Form Requests 1-30
-2024-03-31 22:40:15,570 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
-2024-03-31 22:40:15,570 INFO o.a.j.s.FileServer: Close: /Users/jennieyoun/Downloads/url - Sheet1.csv
-2024-03-31 22:40:15,570 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2024-04-02 22:41:00,433 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2024-04-02 22:41:00,469 INFO o.a.j.JMeter: Loading user properties from: /usr/local/Cellar/jmeter/5.6.3/libexec/bin/user.properties
+2024-04-02 22:41:00,469 INFO o.a.j.JMeter: Loading system properties from: /usr/local/Cellar/jmeter/5.6.3/libexec/bin/system.properties
+2024-04-02 22:41:00,475 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2024-04-02 22:41:00,475 INFO o.a.j.JMeter: Version 5.6.3
+2024-04-02 22:41:00,475 INFO o.a.j.JMeter: java.version=21.0.2
+2024-04-02 22:41:00,475 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2024-04-02 22:41:00,475 INFO o.a.j.JMeter: os.name=Mac OS X
+2024-04-02 22:41:00,475 INFO o.a.j.JMeter: os.arch=x86_64
+2024-04-02 22:41:00,475 INFO o.a.j.JMeter: os.version=13.6.3
+2024-04-02 22:41:00,475 INFO o.a.j.JMeter: file.encoding=UTF-8
+2024-04-02 22:41:00,475 INFO o.a.j.JMeter: java.awt.headless=null
+2024-04-02 22:41:00,475 INFO o.a.j.JMeter: Max memory     =1073741824
+2024-04-02 22:41:00,475 INFO o.a.j.JMeter: Available Processors =16
+2024-04-02 22:41:00,485 INFO o.a.j.JMeter: Default Locale=English (EN)
+2024-04-02 22:41:00,485 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2024-04-02 22:41:00,485 INFO o.a.j.JMeter: JMeterHome=/usr/local/Cellar/jmeter/5.6.3/libexec
+2024-04-02 22:41:00,485 INFO o.a.j.JMeter: user.dir  =/Users/jennieyoun/Downloads/url_shortener/shorter
+2024-04-02 22:41:00,485 INFO o.a.j.JMeter: PWD       =/Users/jennieyoun/Downloads/url_shortener/shorter
+2024-04-02 22:41:00,490 INFO o.a.j.JMeter: IP: 192.168.1.78 Name: Jennies-MBP.attlocal.net FullName: jennies-mbp.attlocal.net
+2024-04-02 22:41:00,508 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2024-04-02 22:41:01,006 INFO o.a.j.JMeterGuiLauncher: Setting LAF to: com.github.weisj.darklaf.DarkLaf:com.github.weisj.darklaf.theme.DarculaTheme
+2024-04-02 22:41:04,119 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.action.Command], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-04-02 22:41:04,274 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.plugin.MenuCreator], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-04-02 22:41:04,403 INFO o.j.r.JARSourceHTTP: Requesting https://jmeter-plugins.org/repo/?installID=mac_os_x-dc9a087777434090e0bdbd459ce6711f-gui
+2024-04-02 22:41:05,631 INFO o.j.r.PluginManager: Plugins Status: [jpgc-plugins-manager=1.9, jmeter-core=5.6.3, jmeter-ftp=5.6.3, jmeter-http=5.6.3, jmeter-jdbc=5.6.3, jmeter-jms=5.6.3, jmeter-junit=5.6.3, jmeter-java=5.6.3, jmeter-ldap=5.6.3, jmeter-mail=5.6.3, jmeter-mongodb=5.6.3, jmeter-native=5.6.3, jmeter-tcp=5.6.3, jmeter-components=5.6.3]
+2024-04-02 22:41:05,632 INFO o.j.r.PluginManagerMenuItem: Plugins Manager has upgrades: [jpgc-plugins-manager]
+2024-04-02 22:41:25,419 INFO o.a.j.s.FileServer: Default base='/Users/jennieyoun/Downloads/url_shortener/shorter'
+2024-04-02 22:41:25,421 INFO o.a.j.g.a.Load: Loading file: /Users/jennieyoun/Downloads/Thread Groupdfdf.jmx
+2024-04-02 22:41:25,422 INFO o.a.j.s.FileServer: Set new base='/Users/jennieyoun/Downloads'
+2024-04-02 22:41:25,608 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2024-04-02 22:41:25,614 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2024-04-02 22:41:25,615 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2024-04-02 22:41:25,617 INFO o.a.j.s.SaveService: Loading file: /Users/jennieyoun/Downloads/Thread Groupdfdf.jmx
+2024-04-02 22:41:25,720 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2024-04-02 22:41:25,721 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2024-04-02 22:41:25,721 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2024-04-02 22:41:25,721 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2024-04-02 22:41:25,721 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2024-04-02 22:41:25,721 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2024-04-02 22:41:25,951 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2024-04-02 22:41:25,952 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2024-04-02 22:41:25,952 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2024-04-02 22:41:25,952 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2024-04-02 22:41:26,089 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.visualizers.ResultRenderer], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-04-02 22:41:26,110 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.visualizers.RequestView], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-04-02 22:41:26,186 INFO o.a.j.s.FileServer: Set new base='/Users/jennieyoun/Downloads'
+2024-04-02 22:51:29,568 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2024-04-02 22:51:29,572 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-04-02 22:51:29,572 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-04-02 22:51:29,574 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2024-04-02 22:51:29,574 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2024-04-02 22:51:29,645 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-04-02 22:51:29,657 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2024-04-02 22:51:29,805 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2024-04-02 22:51:29,806 INFO o.a.j.e.StandardJMeterEngine: Starting 25 threads for group Thread Group.
+2024-04-02 22:51:29,806 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2024-04-02 22:51:29,806 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=25 ramp-up=1 delayedStart=false
+2024-04-02 22:51:29,816 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2024-04-02 22:51:29,819 INFO o.a.j.s.FileServer: Stored: /Users/jennieyoun/Downloads/shorters - Sheet1.csv
+2024-04-02 22:51:29,820 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2024-04-02 22:51:29,820 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2024-04-02 22:51:29,838 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = Jennies-MBP.attlocal.net
+2024-04-02 22:51:29,849 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2024-04-02 22:51:29,853 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-2
+2024-04-02 22:51:29,893 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-3
+2024-04-02 22:51:29,933 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-4
+2024-04-02 22:51:29,974 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-5
+2024-04-02 22:51:30,011 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-6
+2024-04-02 22:51:30,053 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-7
+2024-04-02 22:51:30,066 INFO o.a.j.p.h.s.h.LazyLayeredConnectionSocketFactory: Setting up HTTPS TrustAll Socket Factory
+2024-04-02 22:51:30,070 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
+2024-04-02 22:51:30,070 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
+2024-04-02 22:51:30,090 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-8
+2024-04-02 22:51:30,100 INFO o.a.j.u.SSLManager: JmeterKeyStore Location:  type JKS
+2024-04-02 22:51:30,102 INFO o.a.j.u.SSLManager: KeyStore created OK
+2024-04-02 22:51:30,105 WARN o.a.j.u.SSLManager: Keystore file not found, loading empty keystore
+2024-04-02 22:51:30,133 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-9
+2024-04-02 22:51:30,174 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-10
+2024-04-02 22:51:30,210 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-11
+2024-04-02 22:51:30,253 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-12
+2024-04-02 22:51:30,273 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-4
+2024-04-02 22:51:30,273 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-3
+2024-04-02 22:51:30,273 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-7
+2024-04-02 22:51:30,274 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-4
+2024-04-02 22:51:30,274 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-3
+2024-04-02 22:51:30,274 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-7
+2024-04-02 22:51:30,290 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-13
+2024-04-02 22:51:30,330 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-14
+2024-04-02 22:51:30,367 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-15
+2024-04-02 22:51:30,407 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-16
+2024-04-02 22:51:30,450 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-17
+2024-04-02 22:51:30,491 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-18
+2024-04-02 22:51:30,530 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-19
+2024-04-02 22:51:30,568 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-12
+2024-04-02 22:51:30,568 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-12
+2024-04-02 22:51:30,568 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-20
+2024-04-02 22:51:30,610 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-21
+2024-04-02 22:51:30,631 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-15
+2024-04-02 22:51:30,631 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-15
+2024-04-02 22:51:30,631 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-13
+2024-04-02 22:51:30,631 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-13
+2024-04-02 22:51:30,647 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-22
+2024-04-02 22:51:30,673 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-17
+2024-04-02 22:51:30,673 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-17
+2024-04-02 22:51:30,691 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-23
+2024-04-02 22:51:30,730 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-24
+2024-04-02 22:51:30,770 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-25
+2024-04-02 22:51:31,096 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-16
+2024-04-02 22:51:31,096 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-16
+2024-04-02 22:51:31,099 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-20
+2024-04-02 22:51:31,100 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-20
+2024-04-02 22:51:31,106 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-19
+2024-04-02 22:51:31,107 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-19
+2024-04-02 22:51:31,107 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-18
+2024-04-02 22:51:31,107 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-18
+2024-04-02 22:51:31,144 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2024-04-02 22:51:31,144 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2024-04-02 22:51:31,167 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-23
+2024-04-02 22:51:31,167 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-23
+2024-04-02 22:51:31,180 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-9
+2024-04-02 22:51:31,180 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-9
+2024-04-02 22:51:31,210 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-8
+2024-04-02 22:51:31,210 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-8
+2024-04-02 22:51:31,214 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-11
+2024-04-02 22:51:31,215 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-11
+2024-04-02 22:51:31,221 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-10
+2024-04-02 22:51:31,221 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-10
+2024-04-02 22:51:31,226 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-2
+2024-04-02 22:51:31,227 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-2
+2024-04-02 22:51:31,269 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-5
+2024-04-02 22:51:31,269 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-5
+2024-04-02 22:51:31,318 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-14
+2024-04-02 22:51:31,318 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-14
+2024-04-02 22:51:31,357 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-6
+2024-04-02 22:51:31,357 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-24
+2024-04-02 22:51:31,357 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-6
+2024-04-02 22:51:31,357 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-24
+2024-04-02 22:51:32,309 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-25
+2024-04-02 22:51:32,310 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-25
+2024-04-02 22:52:53,748 INFO o.a.j.g.a.Start: Stopping test
+2024-04-02 22:52:53,863 INFO o.a.j.t.JMeterThread: Stopping: Thread Group 1-21
+2024-04-02 22:52:53,868 WARN o.a.j.t.JMeterThread: Interrupting: Thread Group 1-21 sampler: Redirect Test
+2024-04-02 22:52:53,896 INFO o.a.j.t.JMeterThread: Stopping: Thread Group 1-22
+2024-04-02 22:52:53,897 WARN o.a.j.t.JMeterThread: Interrupting: Thread Group 1-22 sampler: Redirect Test
+2024-04-02 22:52:53,919 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-22
+2024-04-02 22:52:53,919 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-21
+2024-04-02 22:52:53,919 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-21
+2024-04-02 22:52:53,919 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-22
+2024-04-02 22:52:53,926 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2024-04-02 22:52:53,927 INFO o.a.j.s.FileServer: Close: /Users/jennieyoun/Downloads/shorters - Sheet1.csv
+2024-04-02 22:52:53,946 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2024-04-02 22:53:02,266 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2024-04-02 22:53:02,266 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-04-02 22:53:02,267 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2024-04-02 22:53:02,480 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2024-04-02 22:53:02,480 INFO o.a.j.e.StandardJMeterEngine: Starting 25 threads for group Thread Group.
+2024-04-02 22:53:02,480 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2024-04-02 22:53:02,480 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=25 ramp-up=2 delayedStart=false
+2024-04-02 22:53:02,481 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2024-04-02 22:53:02,482 INFO o.a.j.s.FileServer: Stored: /Users/jennieyoun/Downloads/shorters - Sheet1.csv
+2024-04-02 22:53:02,488 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2024-04-02 22:53:02,488 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2024-04-02 22:53:02,565 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-2
+2024-04-02 22:53:02,641 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-3
+2024-04-02 22:53:02,724 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-4
+2024-04-02 22:53:02,802 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-5
+2024-04-02 22:53:02,884 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-6
+2024-04-02 22:53:02,966 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-7
+2024-04-02 22:53:03,044 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-8
+2024-04-02 22:53:03,122 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-9
+2024-04-02 22:53:03,126 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2024-04-02 22:53:03,126 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2024-04-02 22:53:03,205 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-10
+2024-04-02 22:53:03,283 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-11
+2024-04-02 22:53:03,365 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-12
+2024-04-02 22:53:03,445 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-13
+2024-04-02 22:53:03,471 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-7
+2024-04-02 22:53:03,472 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-7
+2024-04-02 22:53:03,510 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-2
+2024-04-02 22:53:03,510 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-2
+2024-04-02 22:53:03,522 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-14
+2024-04-02 22:53:03,581 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-3
+2024-04-02 22:53:03,581 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-3
+2024-04-02 22:53:03,589 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-12
+2024-04-02 22:53:03,589 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-12
+2024-04-02 22:53:03,604 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-15
+2024-04-02 22:53:03,682 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-16
+2024-04-02 22:53:03,701 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-4
+2024-04-02 22:53:03,701 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-4
+2024-04-02 22:53:03,707 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-5
+2024-04-02 22:53:03,707 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-5
+2024-04-02 22:53:03,766 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-17
+2024-04-02 22:53:03,845 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-18
+2024-04-02 22:53:03,924 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-19
+2024-04-02 22:53:03,926 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-6
+2024-04-02 22:53:03,926 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-6
+2024-04-02 22:53:03,934 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-15
+2024-04-02 22:53:03,934 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-15
+2024-04-02 22:53:03,946 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-17
+2024-04-02 22:53:03,947 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-17
+2024-04-02 22:53:03,994 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-9
+2024-04-02 22:53:03,994 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-9
+2024-04-02 22:53:04,003 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-20
+2024-04-02 22:53:04,011 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-8
+2024-04-02 22:53:04,011 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-8
+2024-04-02 22:53:04,076 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-10
+2024-04-02 22:53:04,076 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-10
+2024-04-02 22:53:04,082 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-21
+2024-04-02 22:53:04,092 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-16
+2024-04-02 22:53:04,092 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-16
+2024-04-02 22:53:04,123 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-13
+2024-04-02 22:53:04,123 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-13
+2024-04-02 22:53:04,126 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-11
+2024-04-02 22:53:04,126 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-11
+2024-04-02 22:53:04,165 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-22
+2024-04-02 22:53:04,243 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-23
+2024-04-02 22:53:04,256 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-20
+2024-04-02 22:53:04,256 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-18
+2024-04-02 22:53:04,256 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-19
+2024-04-02 22:53:04,257 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-19
+2024-04-02 22:53:04,257 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-18
+2024-04-02 22:53:04,257 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-20
+2024-04-02 22:53:04,262 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-14
+2024-04-02 22:53:04,262 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-14
+2024-04-02 22:53:04,325 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-24
+2024-04-02 22:53:04,402 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-25
+2024-04-02 22:53:04,571 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-23
+2024-04-02 22:53:04,571 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-23
+2024-04-02 22:53:04,704 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-25
+2024-04-02 22:53:04,704 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-25
+2024-04-02 22:53:04,822 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-24
+2024-04-02 22:53:04,822 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-24
+2024-04-02 22:53:38,999 INFO o.a.j.g.a.Start: Stopping test
+2024-04-02 22:53:39,016 INFO o.a.j.t.JMeterThread: Stopping: Thread Group 1-21
+2024-04-02 22:53:39,017 WARN o.a.j.t.JMeterThread: Interrupting: Thread Group 1-21 sampler: Redirect Test
+2024-04-02 22:53:39,020 INFO o.a.j.t.JMeterThread: Stopping: Thread Group 1-22
+2024-04-02 22:53:39,020 WARN o.a.j.t.JMeterThread: Interrupting: Thread Group 1-22 sampler: Redirect Test
+2024-04-02 22:53:39,022 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-22
+2024-04-02 22:53:39,022 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-21
+2024-04-02 22:53:39,023 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-22
+2024-04-02 22:53:39,023 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-21
+2024-04-02 22:53:39,023 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2024-04-02 22:53:39,023 INFO o.a.j.s.FileServer: Close: /Users/jennieyoun/Downloads/shorters - Sheet1.csv
+2024-04-02 22:53:39,024 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2024-04-02 22:53:48,360 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2024-04-02 22:53:48,360 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-04-02 22:53:48,361 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2024-04-02 22:53:48,424 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2024-04-02 22:53:48,424 INFO o.a.j.e.StandardJMeterEngine: Starting 4 threads for group Thread Group.
+2024-04-02 22:53:48,424 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2024-04-02 22:53:48,424 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=4 ramp-up=2 delayedStart=false
+2024-04-02 22:53:48,425 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2024-04-02 22:53:48,426 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2024-04-02 22:53:48,426 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2024-04-02 22:53:48,426 INFO o.a.j.s.FileServer: Stored: /Users/jennieyoun/Downloads/shorters - Sheet1.csv
+2024-04-02 22:53:48,758 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2024-04-02 22:53:48,758 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2024-04-02 22:53:48,928 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-2
+2024-04-02 22:53:49,376 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-2
+2024-04-02 22:53:49,376 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-2
+2024-04-02 22:53:49,429 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-3
+2024-04-02 22:53:49,918 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-3
+2024-04-02 22:53:49,918 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-3
+2024-04-02 22:53:49,929 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-4
+2024-04-02 22:53:50,311 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-4
+2024-04-02 22:53:50,311 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-4
+2024-04-02 22:53:50,312 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2024-04-02 22:53:50,312 INFO o.a.j.s.FileServer: Close: /Users/jennieyoun/Downloads/shorters - Sheet1.csv
+2024-04-02 22:53:50,312 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2024-04-02 22:54:12,057 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2024-04-02 22:54:12,057 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-04-02 22:54:12,057 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2024-04-02 22:54:12,098 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2024-04-02 22:54:12,098 INFO o.a.j.e.StandardJMeterEngine: Starting 5 threads for group Thread Group.
+2024-04-02 22:54:12,098 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2024-04-02 22:54:12,098 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=5 ramp-up=2 delayedStart=false
+2024-04-02 22:54:12,099 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2024-04-02 22:54:12,100 INFO o.a.j.s.FileServer: Stored: /Users/jennieyoun/Downloads/shorters - Sheet1.csv
+2024-04-02 22:54:12,100 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2024-04-02 22:54:12,100 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2024-04-02 22:54:12,502 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-2
+2024-04-02 22:54:12,902 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-3
+2024-04-02 22:54:13,302 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-4
+2024-04-02 22:54:13,664 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2024-04-02 22:54:13,664 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2024-04-02 22:54:13,700 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-5
+2024-04-02 22:54:14,314 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-2
+2024-04-02 22:54:14,314 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-2
+2024-04-02 22:54:14,384 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-3
+2024-04-02 22:54:14,384 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-3

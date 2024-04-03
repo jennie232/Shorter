@@ -1,33 +1,47 @@
+<div>
 <div class="flex flex-col items-center">
-  <h1 class="text-4xl font-bold mb-8">URL Shortener Stats</h1>
-  <div class="mb-4">
+  <h1 class="text-4xl font-bold my-8">URL Shortener Stats</h1>
+  <div class="mb-8">
     <a
       href={Routes.stats_path(@conn, :export)}
-      class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+      class="inline-block text-white bg-blue-700 border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
     >
       Export as CSV
     </a>
   </div>
-  <table class="shadow-lg rounded-lg w-full table-auto">
-    <thead>
-      <tr class="bg-gray-100">
-        <th class="w-2/5 py-4 px-6 text-left text-gray-600 font-bold uppercase">Original URL</th>
-        <th class="w-2/5 py-4 px-6 text-left text-gray-600 font-bold uppercase">Short URL</th>
-        <th class="w-15 py-4 px-6 text-left text-gray-600 font-bold uppercase">Clicks</th>
-      </tr>
-    </thead>
-    <tbody class="bg-white">
-      <%= for url <- @urls do %>
-        <tr>
-          <td class="py-4 px-6 border-b border-gray-200"><%= url.original_url %></td>
-          <td class="py-4 px-6 border-b border-gray-200">
-            <a target="_blank" href={"#{Application.fetch_env!(:shorter, :base_url)}/#{url.slug}"}>
-              <%= "#{Application.fetch_env!(:shorter, :base_url)}/#{url.slug}" %>
-            </a>
-          </td>
-          <td class="py-4 px-6 border-b border-gray-200 text-center	"><%= url.clicks %></td>
+  <div class="px-4  mx-auto" style="width: 90vw">
+    <table class="shadow-lg rounded-lg w-full table-auto">
+      <thead>
+        <tr class="bg-gray-100">
+          <th class="w-full py-4 px-6 text-left text-gray-600 font-bold uppercase">
+            Original URL
+          </th>
+          <th class="w-auto py-4 px-6 text-left text-gray-600 font-bold uppercase">Short URL</th>
+          <th class="w-auto py-4 px-6 text-center text-gray-600 font-bold uppercase">Clicks</th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
+      </thead>
+      <tbody class="bg-white">
+        <%= for url <- @urls do %>
+          <tr>
+            <td class="py-4 px-6 border-b border-gray-200">
+              <a target="_blank" href={url.original_url} class="original-url-table hover:underline decoration-solid">
+                <%= url.original_url %>
+              </a>
+            </td>
+            <td class="py-4 px-6 border-b border-gray-200">
+              <a
+                target="_blank"
+                href={"#{Application.fetch_env!(:shorter, :base_url)}/#{url.slug}"}
+                class="hover:underline decoration-solid"
+              >
+                <%= "#{Application.fetch_env!(:shorter, :base_url)}/#{url.slug}" %>
+              </a>
+            </td>
+            <td class="py-4 px-6 border-b border-gray-200 text-center	"><%= url.clicks %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
 </div>
