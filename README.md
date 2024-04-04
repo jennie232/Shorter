@@ -54,4 +54,4 @@ I've made updates to the frontend, which are available on the `updated-shorter` 
  ```bash
 git checkout updated-shorter
  ```
-** 04/04/24: I've made updates to increasing the click count logic, where it now runs asynchronously.
+** 04/04/24: I've made updates to increasing the click count logic, where it now runs asynchronously. The changes have now been merged to the main branch!!
