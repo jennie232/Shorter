@@ -4,8 +4,25 @@
 echo "Waiting for the database to become available..."
 /usr/local/bin/wait-for-it $DATABASE_HOSTNAME:5432 --timeout=30 --strict
 
-echo "Running migrations..."
-mix ecto.create
-mix ecto.migrate
+# Test mode
+if [ "$MIX_ENV" = "test" ]; then
+    echo "Running in test mode..."
+    
+    echo "Creating and migrating the test database..."
+    mix ecto.create
+    mix ecto.migrate
+    
+    echo "Running tests..."
+    mix test
 
-exec mix phx.server
+# Dev mode
+else
+    echo "Running in development mode..."
+    
+    echo "Running migrations..."
+    mix ecto.create
+    mix ecto.migrate
+
+    echo "Starting Phoenix server..."
+    exec mix phx.server
+fi

@@ -45,7 +45,14 @@
         <%= "#{Application.fetch_env!(:shorter, :base_url)}/#{@slug}" %>
       </a>
       <p class="w-full overflow-hidden text-ellipsis mt-2 text-sm text-slate-500 original-url">
+        <a
+        target="_blank"
+        href={@original_url}
+        class="text-sm hover:underline decoration-solid "
+      >
         <%= @original_url %>
+      </a>
+        
       </p>
     </div>
   <% end %>

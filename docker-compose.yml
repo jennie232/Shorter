@@ -8,6 +8,7 @@ services:
     depends_on:
       - db
     environment:
+      MIX_ENV: dev
       DATABASE_HOSTNAME: db
       DATABASE_USERNAME: postgres
       DATABASE_PASSWORD: postgres

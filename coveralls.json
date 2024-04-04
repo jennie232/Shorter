@@ -1,0 +1,18 @@
+{
+  "skip_files": [
+    "lib/shorter_web/router.ex",
+    "lib/shorter_web/endpoint.ex",
+    "lib/shorter/repo.ex",
+    "lib/shorter/mailer.ex",
+    "lib/shorter.ex",
+    "lib/shorter_web.ex",
+    "lib/shorter_web/controllers/url_html.ex",
+    "lib/shorter_web/controllers/stats_html.ex",
+    "lib/shorter_web/controllers/page_html.ex",
+    "lib/shorter_web/controllers/error_html.ex",
+    "lib/shorter_web/gettext.ex",
+    "lib/shorter_web/components/core_components",
+    "lib/shorter_web/components/layouts.ex",
+    "test/support/*"
+  ]
+}
