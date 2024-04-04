@@ -9,7 +9,8 @@ defmodule Shorter.MixProject do
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
-      deps: deps()
+      deps: deps(),
+      test_coverage: [tool: ExCoveralls]
     ]
   end
 
@@ -60,6 +61,7 @@ defmodule Shorter.MixProject do
       {:cachex, "~> 3.6"},
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
+      {:excoveralls, "~> 0.18", only: :test},
       {:bandit, "~> 1.2"}
     ]
   end
