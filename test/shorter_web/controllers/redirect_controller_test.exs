@@ -19,10 +19,14 @@ defmodule ShorterWeb.RedirectControllerTest do
       assert redirected_to(conn) == url1.original_url
       assert conn.status == 302
 
+      Process.sleep(100)
+
       {:ok, updated_url} = Urls.get_url_by_slug(url1.slug)
       assert updated_url.clicks == 1
 
       get(conn, "/#{url1.slug}")
+
+      Process.sleep(100)
       {:ok, updated_url} = Urls.get_url_by_slug(url1.slug)
       assert updated_url.clicks == 2
     end

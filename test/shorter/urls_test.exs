@@ -32,7 +32,11 @@ defmodule Shorter.UrlsTest do
     } do
       assert {:ok, retrieved_url} = Urls.get_url_by_slug_and_increment_clicks(url.slug)
       assert retrieved_url.id == url.id
-      assert retrieved_url.clicks == 1
+
+      Process.sleep(100)
+
+      updated_url = Repo.get(Url, url.id)
+      assert updated_url.clicks == 1
     end
 
     test "returns error when the slug doesn't exist" do
