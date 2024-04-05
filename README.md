@@ -1,5 +1,5 @@
 # Shorter
-
+[![codecov](https://codecov.io/gh/jennie232/Shorter/graph/badge.svg?token=BGRB3SVK0V)](https://codecov.io/gh/jennie232/Shorter)
 Shorter is a URL shortener application built with Elixir and Phoenix. It allows users to input a long URL to create a shortened one. The app also shows a table of all short URLs that were created along with a clicks count.
 
 
