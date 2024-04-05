@@ -4,7 +4,7 @@
     :let={f}
     for={@changeset}
     action={~p"/"}
-    class="mt-5 sm:flex flex-col gap-4 sm:items-center"
+    class="mt-5 sm:flex flex-col gap-8 sm:items-center"
   >
     <div class="relative w-full">
       <%= if @changeset.action == :insert && @changeset.errors != [] do %>
@@ -27,7 +27,7 @@
       </div>
     </div>
     <button
-      class="w-full sm:w-auto inline-flex items-center py-2.5 px-3 mt-4 sm:mt-0 text-sm font-medium rounded-md text-white bg-blue-700 border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+      class="w-full sm:w-auto inline-flex items-center py-2.5 px-3  sm:mt-0 text-sm font-medium rounded-md text-white bg-blue-700 border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
       type="submit"
       phx-disable-with="Shortening..."
     >
@@ -40,19 +40,14 @@
       <a
         target="_blank"
         href={"#{Application.fetch_env!(:shorter, :base_url)}/#{@slug}"}
-        class="text-xl font-extrabold hover:underline decoration-solid "
+        class="text-xl font-bold hover:underline decoration-solid "
       >
         <%= "#{Application.fetch_env!(:shorter, :base_url)}/#{@slug}" %>
       </a>
-      <p class="w-full overflow-hidden text-ellipsis mt-2 text-sm text-slate-500 original-url">
-        <a
-        target="_blank"
-        href={@original_url}
-        class="text-sm hover:underline decoration-solid "
-      >
-        <%= @original_url %>
-      </a>
-        
+      <p class="w-full overflow-hidden text-ellipsis mt-3 text-sm text-slate-500 original-url">
+        <a target="_blank" href={@original_url} class="text-sm hover:underline decoration-solid ">
+          <%= @original_url %>
+        </a>
       </p>
     </div>
   <% end %>
