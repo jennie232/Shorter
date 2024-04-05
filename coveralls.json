@@ -1,6 +1,5 @@
 {
   "skip_files": [
-    "lib/shorter_web/router.ex",
     "lib/shorter_web/endpoint.ex",
     "lib/shorter/repo.ex",
     "lib/shorter/mailer.ex",

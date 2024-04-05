@@ -19,6 +19,19 @@ defmodule ShorterWeb.UrlControllerTest do
     end
   end
 
+  describe "redirect short URL to original" do
+    test "redirects to the original URL when short url is inputted", %{conn: conn} do
+      input_attrs = %{"original_url" => @valid_attrs["original_url"], "slug" => "slug123"}
+      {:ok, _url} = Urls.create_url(input_attrs)
+
+      conn = get(conn, "/slug123")
+
+      Process.sleep(100)
+      assert redirected_to(conn) == @valid_attrs["original_url"]
+      assert conn.status == 302
+    end
+  end
+
   describe "create short URL" do
     test "renders the short URL when data is valid and successfully created", %{conn: conn} do
       conn = post(conn, "/", %{"url" => @valid_attrs})

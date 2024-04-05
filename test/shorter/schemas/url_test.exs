@@ -12,6 +12,12 @@ defmodule Shorter.Schemas.UrlTest do
       assert changeset.valid?
     end
 
+    test "is invalid with URL has invalid chars" do
+      changeset = Url.changeset(%Url{}, %{@valid_attrs | original_url: "/invalid_url/>"})
+      refute changeset.valid?
+      assert errors_on(changeset) == %{original_url: ["Invalid URL format"]}
+    end
+
     test "is invalid if scheme is other than http/https" do
       changeset = Url.changeset(%Url{}, %{@invalid_attrs | slug: "slug123"})
       refute changeset.valid?
@@ -24,8 +30,16 @@ defmodule Shorter.Schemas.UrlTest do
       assert errors_on(changeset) == %{original_url: ["URL scheme is missing"]}
     end
 
-    test "is invalid if URL does not have host" do
+    test "is invalid if URL has scheme but is missing the host and path" do
       changeset = Url.changeset(%Url{}, %{@valid_attrs | original_url: "https://"})
+      refute changeset.valid?
+      assert errors_on(changeset) == %{original_url: ["URL does not have a valid host"]}
+    end
+
+    test "is invalid if URL has scheme and path but is missing the host" do
+      changeset =
+        Url.changeset(%Url{}, %{@valid_attrs | original_url: "https:///path/to/resource"})
+
       refute changeset.valid?
       assert errors_on(changeset) == %{original_url: ["URL does not have a valid host"]}
     end
@@ -55,7 +69,6 @@ defmodule Shorter.Schemas.UrlTest do
     end
 
     test "is invalid with duplicate slug" do
-      # Insert a URL with the same slug
       %Url{}
       |> Url.changeset(%{original_url: "https://valid.com", slug: "slug123"})
       |> Repo.insert!()
