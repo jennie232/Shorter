@@ -17,8 +17,8 @@ To ensure data integrity, I validated the original URLs to assert:
 - The host can't be nil or have a length of 0
 - The host must include at least one dot followed by a valid domain extension
 
-Considering the behavior of popular URL shorteners like Bitly, I made the decision to not normalize URLs by removing trailing slashes. Also,
-since websites have different behavior or redirect rules regarding the absence or presence of a trailing slash, I didn't modify the original URL to avoid unintended consequences.
+Considering the behavior of popular URL shorteners like Bitly, I made the decision not to normalize URLs by removing trailing slashes. Also, since websites have different behavior or redirect rules regarding the absence or presence of a trailing slash, I didn't modify the original URL to avoid unintended consequences.
+
 ## Controller Organization
 
 I divided the controllers based on the Single Responsibility Principle:
@@ -34,12 +34,24 @@ This separation makes the codebase more modular and scalable, as it's easier to 
 To optimize performance under high load, I made a few key decisions:
 
 - I chose to update `inc_click_counts` in the context rather than the changeset to minimize overhead.
-- I implemented caching to reduce database queries and improve response times.
-- I used asynchronous processing for updating click counts to ensure fast redirect responses
-- I utilized the slug as an index in the database to optimize performance for lookups for short URLs.
+- I implemented caching to store the slug for a valid original URL with a ttl of 30 minutes to reduce database queries and improve response times.
+- I used asynchronous processing for updating click counts to ensure fast redirect responses.
+- I utilized the slug as an index in the database to optimize performance for lookups of short URLs.
 
 These choices help ensure that Shorter performs well, even under heavy traffic.
 
+## Performance Testing
+
+To validate Shorter's performance under the specified load requirements, I conducted load testing using Apache JMeter. Here are the details of the tests:
+
+1. New URL Form:
+    - Test Plan: Set up a constant throughput timer and ran 50 threads with a 1-second interval.
+    - Result: The throughput was consistently above 5 requests per second, meeting the requirement.
+2. Redirect Endpoint:
+    - Test Plan: Set up a constant throughput timer with a CSV dataset configuration and ran 60 threads.
+    - Result: The throughput was around 35 requests per second, exceeding the requirement of 25 requests per second.
+
+These JMeter tests demonstrate that Shorter can handle the specified traffic load for both the URL submission form and the redirect endpoint.
 ## User Interface Decisions
 
 I designed Shorter's UI with user experience in mind:
@@ -47,7 +59,7 @@ I designed Shorter's UI with user experience in mind:
 - For invalid URLs, I display a generic error message with an example of the correct format, similar to popular URL shorteners like Bitly and TinyURL. I removed `Phoenix.Flash.get` since users don't need to see technical flash messages.
 - If a user tries to access a non-existent short URL, they're redirected to a custom 404 page.
 - The order of routes matters: putting the `/:slug` route last is crucial, otherwise `/stats` gets treated as a slug and triggers a 404.
-- I made sure the pages were responsive depending on screensize. 
+- I ensured the pages were responsive depending on screensize. 
 
 These UI decisions prioritize clarity and a positive user experience, aligning with Shorter's design principles.
 
