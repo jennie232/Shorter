@@ -17,6 +17,8 @@ To ensure data integrity, I validated the original URLs to assert:
 - The host can't be nil or have a length of 0
 - The host must include at least one dot followed by a valid domain extension
 
+Considering the behavior of popular URL shorteners like Bitly, I made the decision to not normalize URLs by removing trailing slashes. Also,
+since websites have different behavior or redirect rules regarding the absence or presence of a trailing slash, I didn't modify the original URL to avoid unintended consequences.
 ## Controller Organization
 
 I divided the controllers based on the Single Responsibility Principle:
@@ -31,8 +33,10 @@ This separation makes the codebase more modular and scalable, as it's easier to 
 
 To optimize performance under high load, I made a few key decisions:
 
-- I chose to update `inc_click_counts` in the context rather than the changeset to minimize overhead
-- I implemented caching to reduce database queries and improve response times
+- I chose to update `inc_click_counts` in the context rather than the changeset to minimize overhead.
+- I implemented caching to reduce database queries and improve response times.
+- I used asynchronous processing for updating click counts to ensure fast redirect responses
+- I utilized the slug as an index in the database to optimize performance for lookups for short URLs.
 
 These choices help ensure that Shorter performs well, even under heavy traffic.
 
@@ -41,10 +45,9 @@ These choices help ensure that Shorter performs well, even under heavy traffic.
 I designed Shorter's UI with user experience in mind:
 
 - For invalid URLs, I display a generic error message with an example of the correct format, similar to popular URL shorteners like Bitly and TinyURL. I removed `Phoenix.Flash.get` since users don't need to see technical flash messages.
-
 - If a user tries to access a non-existent short URL, they're redirected to a custom 404 page.
-
 - The order of routes matters: putting the `/:slug` route last is crucial, otherwise `/stats` gets treated as a slug and triggers a 404.
+- I made sure the pages were responsive depending on screensize. 
 
 These UI decisions prioritize clarity and a positive user experience, aligning with Shorter's design principles.
 
@@ -65,3 +68,8 @@ The development Docker Compose file includes the necessary services and configur
 On the other hand, the testing Docker Compose file is specifically tailored for running tests. It includes the required services and configurations for the testing environment, ensuring that tests are run in isolation and with the appropriate setup.
 
 By using separate Docker Compose files, I can maintain a clear separation between development and testing environments, making it easier to manage dependencies, configurations, and resource allocation for each purpose.
+
+## Scalability Considerations
+To prepare Shorter for a bigger audience, I would need to consider the following to ensure it can handle increased traffic:
+- Caching: Frequently accessed data like popular short URLs and the corresponding original URLs could be cached to provide faster responses and minimize the load on the database.
+- Horizontal Scaling: Adding more instances of web servers and background workers could help Shorter distribute the heavy load across multiple machines, allowing the app to handle higher levels of concurrent requests.
