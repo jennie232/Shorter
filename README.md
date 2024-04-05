@@ -70,8 +70,8 @@ For a detailed explanation of the approach and design decisions made in this pro
 
 
 #### Updated Frontend
-I've made updates to the frontend, which are available on the `updated-shorter` branch. These changes aim to improve user experience. (I may also update some backend logic in the very near future). If you're interested, please run the following command after cloning the repo:
+** 04/05/24: I've made updates to the frontend, which are available on the `updated-shorter` branch. These changes aim to improve user experience. (I may also update some backend logic in the very near future). If you're interested, please run the following command after cloning the repo:
  ```bash
 git checkout updated-shorter
  ```
-** 04/04/24: I've made updates to increasing the click count logic, where it now runs asynchronously. The changes have now been merged to the main branch!!
+** 04/04/24: I've made updates to increasing the click count logic, where it now runs asynchronously. The changes have now been merged to the main branch!! Please refer to the main branch for the most recent changes.
