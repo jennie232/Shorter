@@ -22,7 +22,7 @@ Shorter is a URL shortener application built with Elixir and Phoenix. It provide
 1. Clone the repository and navigate to the app
     ```bash
     git clone https://github.com/jennie232/Shorter.git
-    cd shorter
+    cd Shorter
     ```
 
 2. Docker
