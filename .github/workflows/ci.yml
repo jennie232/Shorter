@@ -45,3 +45,10 @@ jobs:
 
     - name: Run tests with coverage
       run: docker-compose -f docker-compose.test.yml run --rm --entrypoint "/bin/bash" app -c "MIX_ENV=test mix coveralls.json"
+
+    - name: Upload coverage reports to Codecov
+      uses: codecov/codecov-action@v4.0.1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        slug: jennie232/Shorter
+        file: ./_build/test/cover/coveralls.json # Specify the path to the coverage report
