@@ -7,6 +7,9 @@ echo "Waiting for the database to become available..."
 # Test mode
 if [ "$MIX_ENV" = "test" ]; then
     echo "Running in test mode..."
+
+    echo "Fetching dependencies..."
+    mix deps.get
     
     echo "Creating and migrating the test database..."
     mix ecto.create
